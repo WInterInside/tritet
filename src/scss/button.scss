@@ -30,37 +30,6 @@
 		}
 	}
 
-	@media only screen and (max-width: 1000px) {
-		background-color: #667884;
-		color: #ffffff;
-	}
-
-	&--light {
-		color: #CADFED;
-		background-color: #667884;
-
-		@media (hover: hover) {
-			&:hover {
-				// background-color: darken($color: #667884, $amount: 10%);
-				background-color: #41484d52;
-				color: #ffffff;
-			}
-		}
-	}
-
-	&--yellow {
-		background-color: #D8B075;
-		color: #755530;
-
-		@media (hover: hover) {
-			&:hover {
-				// background-color: darken($color: #D8B075, $amount: 30%);
-				background-color:  #b68843;
-				color: #ffffff;
-			}
-		}
-	}
-
 	@media only screen and (max-width: 1400px) {
 		padding: 10px 20px;
 		font-size: 13px;

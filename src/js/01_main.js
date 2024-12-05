@@ -115,21 +115,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	// createMap('contacts__map', [51.678526, 39.164103]);
 });
 
-class Tabs {
-	constructor() {
-		this.setTabs = this.setTabs.bind(this);
-		this.clearTabs = this.clearTabs.bind(this);
-	}
+// class Tabs {
+// 	constructor() {
+// 		this.setTabs = this.setTabs.bind(this);
+// 		this.clearTabs = this.clearTabs.bind(this);
+// 	}
 
-	setTabs(tabs, id) {
-		this.clearTabs(tabs);
-		tabs.find('[data-tab="' + id + '"]').addClass('is-active');
-	}
+// 	setTabs(tabs, id) {
+// 		this.clearTabs(tabs);
+// 		tabs.find('[data-tab="' + id + '"]').addClass('is-active');
+// 	}
 
-	clearTabs(tabs) {
-		tabs.find('[data-elements~="tabsBtn"], [data-elements~="tabsItem"]').removeClass('is-active');
-	}
-}
+// 	clearTabs(tabs) {
+// 		tabs.find('[data-elements~="tabsBtn"], [data-elements~="tabsItem"]').removeClass('is-active');
+// 	}
+// }
 
 $(document).on('click', '[data-elements~="tabsBtn"]', function(e) {
 	let id = $(this).data('tab');

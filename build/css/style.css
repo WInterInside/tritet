@@ -95,32 +95,6 @@
     color: #ffffff;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .button {
-    background-color: #667884;
-    color: #ffffff;
-  }
-}
-.button--light {
-  color: #CADFED;
-  background-color: #667884;
-}
-@media (hover: hover) {
-  .button--light:hover {
-    background-color: rgba(65, 72, 77, 0.3215686275);
-    color: #ffffff;
-  }
-}
-.button--yellow {
-  background-color: #D8B075;
-  color: #755530;
-}
-@media (hover: hover) {
-  .button--yellow:hover {
-    background-color: #b68843;
-    color: #ffffff;
-  }
-}
 @media only screen and (max-width: 1400px) {
   .button {
     padding: 10px 20px;
@@ -1934,24 +1908,6 @@ body.is-popup-open {
   transition: padding 0.3s;
   padding-top: 230px;
 }
-@media only screen and (max-width: 1000px) {
-  .main {
-    padding-top: 94px;
-  }
-}
-
-.page-heading {
-  font-size: 40px;
-  line-height: 56px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-@media only screen and (max-width: 700px) {
-  .page-heading {
-    margin-bottom: 20px;
-  }
-}
-
 .container {
   width: 100%;
   max-width: 1920px;
@@ -2582,24 +2538,6 @@ body.is-popup-open {
   transition: padding 0.3s;
   padding-top: 230px;
 }
-@media only screen and (max-width: 1000px) {
-  .main {
-    padding-top: 94px;
-  }
-}
-
-.page-heading {
-  font-size: 40px;
-  line-height: 56px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-@media only screen and (max-width: 700px) {
-  .page-heading {
-    margin-bottom: 20px;
-  }
-}
-
 .container {
   width: 100%;
   max-width: 1920px;
