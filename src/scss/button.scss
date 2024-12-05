@@ -9,24 +9,23 @@
 	text-decoration: none;
 	transition: color .3s, background-color .3s, opacity .3s, box-shadow .3s;
 
-	font-family: Onest;
-	font-size: 14px;
+	font-family: Nunito Sans;
+	font-size: 16px;
 	font-weight: 600;
-	line-height: 17.85px;
-	text-transform: uppercase;
+	line-height: 22.4px;
 
-	color: #667884;
-	background-color: #66788452;
+	color: #555555;
+	background-color: #fff;
 
-	padding: 20px 40px;
-	border-radius: 64px;
+	padding: 24px 36px;
+	border-radius: 48px;
 	border: none;
 
 	@media (hover: hover) {
 		&:hover {
 			// background-color: darken($color: #66788452, $amount: 30%);
-			background-color: #41484d52;
-			color: #ffffff;
+			background-color: #ffffffea;
+			color: #000;
 		}
 	}
 

@@ -14,7 +14,7 @@ body {
 
 body {
 	color: #2E3237;
-	font-family: "Onest", serif;
+	font-family: "Nunito Sans", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
@@ -37,7 +37,7 @@ body {
 	position: relative;
 	flex-grow: 1;
 	transition: padding .3s;
-	padding-top: 230px;
+	// padding-top: 230px;
 	
 	@media only screen and (max-width: 1000px) {
 
@@ -157,6 +157,19 @@ input,
 label,
 button::-moz-selection {
 	background: transparent
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /* Modern Browsers */
