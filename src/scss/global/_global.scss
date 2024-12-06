@@ -13,7 +13,7 @@ body {
 }
 
 body {
-	color: #2E3237;
+	color: #fff;
 	font-family: "Nunito Sans", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -36,12 +36,6 @@ body {
 .main {
 	position: relative;
 	flex-grow: 1;
-	transition: padding .3s;
-	// padding-top: 230px;
-	
-	@media only screen and (max-width: 1000px) {
-
-	}
 }
 
 .container {
@@ -157,6 +151,18 @@ input,
 label,
 button::-moz-selection {
 	background: transparent
+}
+
+.section-caption {
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 62.4px;
+	color: #555555;
+
+	@media only screen and (max-width: 1000px) {
+		font-size: 28px;
+		line-height: 32px;
+	}
 }
 
 .visually-hidden {
