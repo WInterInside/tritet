@@ -3,6 +3,7 @@ const body = $('body');
 
 // Навигационный переключатель
 const navToggle = $('[data-element~="navToggle"]');
+const subNavToggle = $('[data-element~="subNavToggle"]');
 
 // Переключение состояния навигационного меню
 const toggleNav = () => {
@@ -10,6 +11,14 @@ const toggleNav = () => {
 		body.addClass('is-nav-open');
 	} else {
 		body.removeClass('is-nav-open');
+	}
+};
+
+const toggleSubNav = () => {
+	if (!body.hasClass('is-sub-nav-open')) {
+		body.addClass('is-sub-nav-open');
+	} else {
+		body.removeClass('is-sub-nav-open');
 	}
 };
 
@@ -24,6 +33,7 @@ const handleScroll = () => {
 
 // Событие клика на навигационном переключателе
 navToggle.on('click', toggleNav);
+subNavToggle.on('click', toggleSubNav);
 
 // Событие прокрутки окна
 $(window).on('scroll', handleScroll);
