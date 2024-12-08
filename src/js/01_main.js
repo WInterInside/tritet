@@ -168,3 +168,35 @@ $(document).ready(function () {
 		});
 	});
 });
+
+$(document).ready(function() {
+    var $bigSlider = $('.big-slider');
+    var $smallSlider = $('.small-slider');
+
+    $bigSlider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.small-slider'
+    });
+
+    $smallSlider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.big-slider',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
+    });
+
+    // Кастомные кнопки управления
+    $('.prev').on('click', function() {
+        $smallSlider.slick('slickPrev');
+    });
+
+    $('.next').on('click', function() {
+        $smallSlider.slick('slickNext');
+    });
+});

@@ -1,10 +1,8 @@
 .breadcrumbs {
-	margin-top: 20px;
 	display: flex;
-	height: 50px;
-	
+	margin-top: 13px;
+
 	@media (max-width: 1000px) {
-		// display: none;
 		overflow-x: scroll;
 		&::-webkit-scrollbar,
 		&::-webkit-scrollbar-thumb {
@@ -14,19 +12,22 @@
 
 	& a {
 		font-size: 14px;
-		line-height: 20px;
-		color: #667884;
+		font-weight: 400;
+		line-height: 18.2px;
+		color: #555555;
+
+		@media (max-width: 700px) {
+			font-size: 10px;
+			line-height: 14px;
+		}
 	}
 
 	.breadcrumb_font_style {
-		padding: 6px;
-		border-radius: 4px;
-		background-color: #9B9B9B29;
 		margin-right: 10px;
 	}
 
 	.breadcrumb_font_dash {
-		color: #2E323729;
+		color: #555555;
 	}
 
 	& ol {
@@ -37,10 +38,15 @@
 		display: flex;
 		align-items: center;
 		width: max-content;
-
 		font-size: 14px;
-		line-height: 20px;
-		color: #667884;
+		font-weight: 400;
+		line-height: 18.2px;
+		color: #555555;
+
+		@media (max-width: 700px) {
+			font-size: 10px;
+			line-height: 14px;
+		}
 	}
 
 	& ol li:not(:last-child) {
@@ -49,16 +55,9 @@
 
 	& ol li:last-child {
 		.breadcrumb_font_style {
-			padding: 6px;
-			border-radius: 4px;
-			background-color: #9B9B9B29;
 			margin-right: 10px;
-			color: #2E323752;
+			color: #555555;
 		}
-	}
-
-	.breadcrumb_font_style {
-
 	}
 
 	.span_m_l_20 {
