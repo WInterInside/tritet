@@ -27,38 +27,43 @@
 
 	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
 
-	<title>ТРИТЭТ | Главная</title>
+	<title>ТРИТЭТ | 404</title>
 </head>
 
 
 <body>
 	<div class="wrapper">
 
-		<header class="header" data-element="header">
+		<header class="header header--page" data-element="header">
+
 	<div class="container">
 		<div class="header__wrapper">
+
 			<button class="header__burger" data-element="navToggle">
 				<i></i>
 				<i></i>
 				<i></i>
 			</button>
+
 			<a href="/" class="header__logo">
 				<img src="img/logo.svg" alt="site logo">
 			</a>
+
 			<div class="menu">
 				<div class="menu-scroll">
+
 					<nav class="header__nav">
 						<ul>
 							<li><a href="/">Главная</a></li>
 							<li><a href="/">Услуги</a></li>
 							<li><a href="/">Портфолио</a></li>
-
+							
 							<li>
 								<div class="header__nav-caption" data-element="subNavToggle">
 									<h3>Наше производство</h3>
 									<img src="img/icons/down.svg" alt="icon">
 								</div>
-
+								
 								<ul>
 									<li>
 										<a href="#">Двери для спален</a>
@@ -90,6 +95,7 @@
 							<li><a href="/">Контакты</a></li>
 						</ul>
 					</nav>
+
 					<div class="header__contacts">
 						<a href="tel:+79787962357">
 							<img src="img/icons/phone.svg" alt="icon">
@@ -98,274 +104,34 @@
 							<img src="img/icons/mail.svg" alt="icon">
 						</a>
 					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+
 </header>
 
 
 
 
 		<main class="main">
-			<section class="hero">
+			<section class="error">
 				<div class="container">
-					<div class="hero__content">
-						<h1 class="visually-hidden">ТРИТЭТ</h1>
-						<p class="hero__main-text">
-							Забудьте о стандартных решениях и лишних проблемах
+					<div class="error__content">
+						<h1 class="error__caption">
+							404
+						</h1>
+						<p class="error__subcaption">
+							Ошибка! <br>
+							Страница не найдена
 						</p>
-						<p class="hero__sub-text">
-							Мы создаём ваш уникальный интерьер с полным авторским надзором всего процесса
+						<p class="error__text">
+							К сожалению запрашиваемая Вами страница не найдена
 						</p>
-						<a href="" class="button hero__button">
-							<span>
-								Связаться с менеджером
-							</span>
-							<img src="img/icons/arrow.svg" alt="arrow icon">
+						<a href="/" class="button error__button">
+							Вернуться на главную
 						</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="resive">
-				<div class="container">
-					<h2 class="section-caption">
-						Получи дизайн-проект мечты с полным сопровождением 
-					</h2>
-					<div class="resive__cards">
-
-						<a href="/" class="resive__card">
-							<img class="resive__bg" src="img/resive2.jpg" alt="resive bg">
-
-							<div class="resive__content">
-								<h2 class="resive__heading">
-									3Д дизайн
-								</h2>
-								<span class="resive__object">
-									интерьера
-								</span>
-								<span class="resive__icon">
-									<img src="img/icons/white-arrow.svg" alt="arrow icon">
-								</span>
-							</div>
-						</a>
-
-						<a href="/" class="resive__card">
-							<img class="resive__bg" src="img/resive1.jpg" alt="resive bg">
-
-							<div class="resive__content">
-								<h2 class="resive__heading">
-									3Д дизайн
-								</h2>
-								<span class="resive__object">
-									интерьера
-								</span>
-								<span class="resive__icon">
-									<img src="img/icons/white-arrow.svg" alt="arrow icon">
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="projects">
-				<div class="container">
-					<div class="projects__header">
-						<h2 class="section-caption">
-							Более 15 лет создаём <br>
-							уникальные дизайн проекты
-						</h2>
-						<a href="/" class="projects__all">
-							<span>Все проекты</span>
-							<img src="img/icons/brown-arrow.svg" alt="arrow icon">
-						</a>
-					</div>
-
-					<div class="projects__cards">
-						<a class="projects__card">
-							<div class="projects__preview">
-								<img src="img/project2.jpg" alt="project preview">
-							</div>
-							<div class="projects__info">
-								<span>Москва</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>3Д визуализация</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>2020 г.</span>
-							</div>
-							<h3 class="projects__name">
-								Проект частного дома
-								<img src="img/icons/brown-arrow.svg" alt="arrow icon">
-							</h3>
-						</a>
-
-						<a class="projects__card">
-							<div class="projects__preview">
-								<img src="img/project1.jpg" alt="project preview">
-							</div>
-							<div class="projects__info">
-								<span>симферополь </span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>3Д визуализация</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>2024 г.</span>
-							</div>
-							<h3 class="projects__name">
-								Проект 2 к. квартира ЖК «Альфа»
-								<img src="img/icons/brown-arrow.svg" alt="arrow icon">
-							</h3>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="advantages">
-				<div class="container">
-					<h2 class="section-caption section-caption--white">
-						Преимущества
-					</h2>
-					<ul>
-						<li>
-							<h3>Гибкие решения</h3>
-							<p>Мы предлагаем различные варианты и решения, адаптируясь к вашему бюджету и срокам.</p>
-						</li>
-						<li>
-							<h3>Подробные чертежи</h3>
-							<p>Предоставляем чертежи для строительства, и производства мебели, согласно вашему дизайн-проекту</p>
-						</li>
-						<li>
-							<h3>Юридические гарантии</h3>
-							<p>Работаем строго по договору, четко и прозрачно прописав, что входит в услугу и что вы получите при подписании </p>
-						</li>
-						<li>
-							<h3>Онлайн консультация</h3>
-							<p>Предоставляем консультацию и разработку дизайн-проекта удаленно. Работаем по всей России</p>
-						</li>
-						<li>
-							<h3>Полное сопровождение</h3>
-							<p>Выезжаем на объекты и осуществляем авторский надзор от начала проекта и до его завершения </p>
-						</li>
-
-						<li>
-							<div>
-								<img src="img/advantages.jpg" alt="">
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section class="drawings">
-				<div class="container">
-					<h2 class="section-caption">
-						Примеры чертежей
-					</h2>
-					<div class="projects__cards">
-						<div href="/" class="projects__card">
-							<div class="drawings__preview">
-								<div class="drawings__slider">
-									<!-- Добавляем слайды -->
-									<div><img src="img/draw1.jpg" alt="Slide 1"></div>
-									<div><img src="img/draw2.jpg" alt="Slide 2"></div>
-								</div>
-
-								<div class="drawings__controls">
-									<button class="prev">
-										<img src="img/icons/slider-control.svg" alt="">
-									</button>
-
-									<button class="next">
-										<img src="img/icons/slider-control.svg" alt="">
-									</button>
-								</div>
-							</div>
-
-							<div class="projects__info">
-								<span>симферополь</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>чертеж</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>2024 г.</span>
-							</div>
-							<a href="/" class="projects__name">
-								<span>Чертежный проект ЖК «Бригантина»</span>
-								<img src="img/icons/brown-arrow.svg" alt="arrow icon">
-							</a>
-						</div>
-
-						<div href="/" class="projects__card">
-							<div class="drawings__preview">
-								<div class="drawings__slider">
-									<!-- Добавляем слайды -->
-									<div><img src="img/draw1.jpg" alt="Slide 1"></div>
-									<div><img src="img/draw2.jpg" alt="Slide 2"></div>
-								</div>
-
-								<div class="drawings__controls">
-									<button class="prev">
-										<img src="img/icons/slider-control.svg" alt="">
-									</button>
-
-									<button class="next">
-										<img src="img/icons/slider-control.svg" alt="">
-									</button>
-								</div>
-							</div>
-
-							<div class="projects__info">
-								<span>симферополь </span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>чертеж</span>
-								<span>&nbsp;/&nbsp;</span>
-								<span>2023 г.</span>
-							</div>
-							<a href="/" class="projects__name">
-								<span>Чертежный проект ЖК «Альфа»</span>
-								<img src="img/icons/brown-arrow.svg" alt="arrow icon">
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="consultation">
-				<div class="container">
-					<div class="consultation__wrapper">
-						<div class="consultation__content">
-							<h2 class="consultation__caption">
-								Консультация специалиста
-							</h2>
-							<p class="consultation__text">
-								Заполните форму обратной связи и получите бесплатную <br> консультацию от нашего специалиста с опытом работы более 15 лет 
-							</p>
-
-							<form class="form" action="">
-								<div class="form__wrapper">
-									<input class="form__input" type="text" name="name" required="" placeholder="Имя">
-									<input class="form__input form__input--mail" type="email" name="mail" required="" placeholder="E-mail">
-									<input class="form__input form__input--tel" type="text" name="tel" required="" placeholder="Телефон" maxlength="18">
-								</div>
-
-								<div class="form__wrapper">
-									<div class="form__agreement">
-										<input class="form__checkbox" id="agreement-doc" type="checkbox" name="agreement" checked required="">
-										<label class="form__label form__label--checkbox" for="agreement-doc">
-											Согласие на обработку персональных данных
-										</label>
-									</div>
-									
-									<button class="button form__button" type="submit">
-										<span>
-											Отправить заявку
-										</span>
-										<img src="img/icons/arrow.svg" alt="arrow icon">
-									</button>
-								</div>
-							</form>
-						</div>
-						<img class="consultation__img" src="img/consultation-img.jpg" alt="">
 					</div>
 				</div>
 			</section>

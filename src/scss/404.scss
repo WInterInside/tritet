@@ -1,0 +1,57 @@
+.error {
+	padding: 150px 0 120px 0;
+
+	@media (max-width: 1000px) {
+		padding: 100px 0;
+	}
+
+	&__content {
+		min-height: 670px;
+		padding: 95px 120px;
+		background-image: url("../img/404.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		color: #555555;
+
+		@media (max-width: 700px) {
+			padding: 20px;
+		}
+	}
+
+	&__caption {
+		font-size: 128px;
+		font-weight: 700;
+		line-height: 179.2px;
+	}
+
+	&__subcaption {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 50.4px;
+		margin: 0;
+	}
+
+	&__text {
+		width: 40%;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 28px;
+
+		@media (max-width: 900px) {
+			width: 60%;
+		}
+	}
+
+	&__button {
+		background-color: #452222 !important;
+		color: #fff !important;
+		margin-top: 50px;
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: #774242 !important;
+			}
+		}
+	}
+}

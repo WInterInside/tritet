@@ -1,0 +1,55 @@
+.success {
+	padding: 150px 0 120px 0;
+
+	@media (max-width: 1000px) {
+		padding: 100px 0;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 95px 120px;
+		background-image: url("../img/success.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		color: #555555;
+
+		@media (max-width: 700px) {
+			padding: 20px;
+		}
+	}
+
+	&__caption {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 50.4px;
+		text-align: center;
+	}
+
+	&__text {
+		width: 33.333%;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 28px;
+		text-align: center;
+
+		@media (max-width: 700px) {
+			width: 100%;
+		}
+	}
+
+	&__button {
+		background-color: #452222 !important;
+		color: #fff !important;
+		margin-top: 50px;
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: #774242 !important;
+			}
+		}
+	}
+}

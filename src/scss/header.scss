@@ -236,6 +236,30 @@
 			padding-bottom: 100px;
 		}
 	}
+
+	&--page {
+		background-color: #63614F;
+
+		.header__wrapper {
+			padding: 10px 0;
+		}
+
+		.header__contacts {
+			display: flex;
+			align-items: center;
+			gap: 36px;
+
+			& a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				background-color: #A4A47C;
+			}
+		}
+	}
 }
 
 body.is-sub-nav-open {
@@ -269,7 +293,7 @@ body.is-nav-open {
 body.is-scrolled {
 	.header {
 		box-shadow: 0px 11px 15px -10px #000000c2;
-		
+
 		background-color: #63614f9b;
 		backdrop-filter: blur(10px);
 
@@ -277,7 +301,7 @@ body.is-scrolled {
 			background-color: #63614f;
 			backdrop-filter: none;
 		}
-		
+
 		&__wrapper {
 			position: relative;
 			width: 100%;
