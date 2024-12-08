@@ -1,108 +1,70 @@
 .form {
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
-
-	&__input {
-		width: 100%;
-
-		&-custom {
-			position: relative;
-			display: inline-flex;
-			margin: 32px 0;
-		}
-	}
-
-	&__button {
-		width: 100%;
-		background-color: #CE4C4C;
-		text-transform: uppercase;
-		color: #ffffff;
-
-		@media (hover: hover) {
-			&:hover {
-				// background-color: darken($color: #CE4C4C, $amount: 15%);
-				background-color: #c43535;
-			}
-		}
-	}
+	gap: 36px;
 
 	&__checkbox {
 		display: none;
 	}
 
 	&__wrapper {
-		&--agreement {
-			opacity: .5;
+		display: flex;
+		align-items: center;
+		gap: 14px;
+
+		@media (max-width: 800px) {
+			flex-direction: column;
 		}
-	}
-
-	& textarea {
-		resize: none;
-
-		&::-webkit-scrollbar,
-		&::-webkit-scrollbar-thumb {
-			display: none;
-		}
-	}
-
-	& input {
-		border: none;
-		background-color: #ffffff;
-		border-radius: 64px;
-		padding: 24px 42px;
-		border: 1px solid #2E323729;
 	}
 
 	&__label {
 		display: block;
 		cursor: pointer;
 
-		&-custom {
-			font-family: Onest;
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 20.4px;
-			text-align: center;
-			margin: 0 auto;
-			color: #667884;
-			border-bottom: 1px dashed #667884;
-			transition: border-color .3s;
-			cursor: pointer;
-
-			@media (hover: hover) {
-				&:hover {
-					border-color: transparent;
-				}
-			}
-		}
-
 		&--checkbox {
-			color: #181C1DA3;
-			font-family: Onest;
 			font-size: 12px;
 			font-weight: 400;
-			line-height: 15.3px;
-			text-align: center;
-			margin-top: 16px;
+			line-height: 16.37px;
+			color: #A4A47C;
 		}
 	}
 
 	&__label::before {
 		content: "";
 		display: inline-block;
-		width: 18px;
-		height: 18px;
-		border-radius: 3px;
-		border: 1px solid #2E323752;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #A4A47C;
 		margin-right: 10px;
 		vertical-align: middle;
-		background-color: #ffffff;
 	}
 
 	&__checkbox:checked + &__label::before {
 		background-image: url("../img/check.svg");
 		background-repeat: no-repeat;
 		background-position: center center;
+	}
+
+	&__button {
+		width: 284px;
+		gap: 13px;
+		margin-left: auto;
+
+		@media (max-width: 900px) {
+			margin: 0 auto;
+		}
+	}
+
+	& input {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #fff;
+		padding: 10px 0 24px 0;
+		font-family: Nunito Sans;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 21px;
+		text-align: left;
+		color: #fff;
 	}
 }

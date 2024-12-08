@@ -38,7 +38,7 @@ subNavToggle.on('click', toggleSubNav);
 // Событие прокрутки окна
 $(window).on('scroll', handleScroll);
 
-// // прокрутка статьи
+// прокрутка статьи
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function(e) {
 		e.preventDefault();
@@ -59,7 +59,7 @@ $('.form__input--tel').each(function() {
 		event.keyCode && (keyCode = event.keyCode);
 		var pos = this.selectionStart;
 		if (pos < 3) event.preventDefault();
-		var matrix = "+7 (___) ___  ",
+		var matrix = "+7 (___) ___ __ __",
 			i = 0,
 			def = matrix.replace(/\D/g, ""),
 			val = $(this).val().replace(/\D/g, ""),
@@ -125,22 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	// createMap('contacts__map', [51.678526, 39.164103]);
 });
 
-// class Tabs {
-// 	constructor() {
-// 		this.setTabs = this.setTabs.bind(this);
-// 		this.clearTabs = this.clearTabs.bind(this);
-// 	}
-
-// 	setTabs(tabs, id) {
-// 		this.clearTabs(tabs);
-// 		tabs.find('[data-tab="' + id + '"]').addClass('is-active');
-// 	}
-
-// 	clearTabs(tabs) {
-// 		tabs.find('[data-elements~="tabsBtn"], [data-elements~="tabsItem"]').removeClass('is-active');
-// 	}
-// }
-
 $(document).on('click', '[data-elements~="tabsBtn"]', function(e) {
 	let id = $(this).data('tab');
 	let tabs = $(this).closest('[data-elements~="tabs"]');
@@ -148,5 +132,39 @@ $(document).on('click', '[data-elements~="tabsBtn"]', function(e) {
 
 	tabContents.each(function() {
 		$(this).toggleClass('is-active', id === $(this).data('tab'));
+	});
+});
+
+$(document).ready(function () {
+	// Находим все слайдеры и кнопки
+	var sliders = $('.drawings__slider');
+	var prevButtons = $('.prev');
+	var nextButtons = $('.next');
+
+	// Проходимся по каждому слайдеру
+	sliders.each(function(index) {
+		var currentSlider = $(this);
+
+		// Инициализируем текущий слайдер
+		currentSlider.slick({
+			dots: false,
+			arrows: false,
+			controls: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true,
+			autoplay: true,
+			autoplaySpeed: 3000
+		});
+
+		// Привязываем события к кнопкам текущего слайдера
+		prevButtons.eq(index).on('click', function () {
+			currentSlider.slick('slickPrev');
+		});
+
+		nextButtons.eq(index).on('click', function () {
+			currentSlider.slick('slickNext');
+		});
 	});
 });

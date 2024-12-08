@@ -1,6 +1,6 @@
 .resive {
 	padding: 100px 0 0 0;
-	
+
 	@media only screen and (max-width: 1000px) {
 		padding: 40px 0 0 0;
 	}
@@ -36,6 +36,7 @@
 			height: 100%;
 			width: 100%;
 			background: linear-gradient(180deg, #555555 14.5%, rgba(6, 6, 6, 0.737) 47.5%, rgba(39, 39, 39, 0) 100%);
+			transition: opacity .3s;
 		}
 
 		@media only screen and (max-width: 1000px) {
@@ -109,6 +110,10 @@
 	.resive__card:hover {
 		.resive__bg {
 			transform: scale(1.07);
+		}
+
+		&::before {
+			opacity: 0;
 		}
 
 		.resive__icon {

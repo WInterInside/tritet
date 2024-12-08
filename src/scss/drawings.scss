@@ -1,4 +1,100 @@
 .drawings {
-	padding: 100px 0;
-	background-color: red;
+	padding: 150px 0;
+
+	@media (max-width: 750px) {
+		padding: 40px 0;
+	}
+
+	&__preview {
+		position: relative;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		width: calc(100% - 20px);
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+
+		& .prev,
+		& .next {
+			display: flex;
+			width: 56px;
+			height: 56px;
+			flex-shrink: 0;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #A4A47C;
+			background-color: #fff;
+			padding: 16px 16px 16px 12px;
+			transition: border-color .3s, background-color .3s;
+		}
+
+		
+
+		@media (hover: hover) {
+			& .prev:hover,
+			& .next:hover {
+				border-color: #535340;
+				background-color: #f1f1f1;
+			}
+		}
+
+		& .next {
+			transform: scale(-1, -1);
+		}
+
+		@media only screen and (max-width: 1000px) {
+			display: none;
+		}
+	}
+
+	/* Устраняем влияние встроенных стилей Slick Slider */
+	&__slider {
+		border: 1px solid #B5B2B2;
+		height: 460px;
+
+		@media only screen and (max-width: 1400px) {
+			height: 360px;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			height: 214px;
+		}
+
+		.slick-list {
+			height: 100%!important;
+		}
+
+		.slick-track {
+			height: 100%!important;
+			display: flex!important;
+			align-items: stretch!important;
+		}
+
+		.slick-slide {
+			position: relative;
+			height: 100%!important;
+			display: flex!important;
+			align-items: center!important;
+			justify-content: center!important;
+		}
+
+		.slick-slide > div {
+			height: 100%!important;
+			display: flex!important;
+			align-items: center!important;
+			justify-content: center!important;
+		}
+
+		.slick-slide img {
+			position: absolute;
+			inset: 0;
+			width: 100%!important;
+			height: 100%!important;
+			object-fit: contain!important;
+		}
+	}
 }
+

@@ -2,9 +2,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #2E3237;
-	color: #F3F0E2DB;
+	background-color: #555555;
+	color: #ffffff;
 	width: 100%;
+
+	&__caption {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22.4px;
+		margin-bottom: 12px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -13,85 +20,7 @@
 	}
 
 	&__main {
-		padding: 100px 0;
-
-		@media only screen and (max-width: 1380px) {
-			padding: 30px 0;
-		}
-	}
-
-	&__logo {
-		position: relative;
-		padding-bottom: 32px;
-		border-bottom: 1px solid #FFFFFF3D;
-		display: inline-block;
-		width: 220.64px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 50%;
-			height: 2px;
-			background-color: #ffffff;;
-		}
-
-		& img {
-			flex-shrink: 0;
-			width: 220.64px;
-			height: 37px;
-		}
-
-		@media only screen and (max-width: 610px) {
-			margin: 0 auto;
-		}
-	}
-
-	&__time {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		gap: 24px;
-
-		&-icon {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 68px;
-			height: 68px;
-			background-color: #FAF9F314;
-			border-radius: 50%;
-		}
-
-		&-content {
-			display: flex;
-			flex-direction: column;
-			color: #FFFFFFA3;
-
-			& h3 {
-				color: #ffffff;
-				margin-bottom: 8px;
-				font-weight: 400;
-			}
-		}
-	}
-
-	&__requisites {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-
-		&-text {
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 18.2px;
-			color: #FFFFFFA3 !important;
-		}
-
-		@media only screen and (max-width: 610px) {
-			text-align: center;
-		}
+		padding: 34px 0;
 	}
 
 	&__nav {
@@ -100,15 +29,12 @@
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 10px;
 
-		&-link {
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 20.4px;
-			text-decoration-line: underline;
-			color: #F3F0E2DB;
-
+		& a {
+			font-size: 14px;
+			line-height: 22.4px;
+			color: #fff;
 			transition: opacity .3s;
 
 			@media (hover: hover) {
@@ -120,36 +46,47 @@
 	}
 
 	&__address {
-		font-style: normal;
 		font-size: 14px;
-		line-height: 22px;
+		line-height: 22.4px;
+		font-style: normal;
 
 		@media only screen and (max-width: 900px) {
 			text-align: center;
 		}
 	}
 
-	&__map {
-		border-radius: 16px;
-		overflow: hidden;
-		margin-top: 16px;
+	&__worktime {
+		font-size: 14px;
+		line-height: 22.4px;
+		margin-bottom: 40px;
 	}
 
-	&__brands {
+	&__mail {
+		font-size: 14px;
+		line-height: 22.4px;
+		color: #fff;
+		transition: opacity .3s;
+
+		@media (hover: hover) {
+			&:hover {
+				opacity: .7;
+			}
+		}
+	}
+
+	&__pages {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 36px;
 
-		&-link {
-			font-family: Optima;
+		& a {
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 16px;
-			border-bottom: 1px solid #FFFFFF;
-			color: #FFFFFF;
+			color: #fff;
 			transition: opacity .3s;
 
 			@media (hover: hover) {
@@ -160,7 +97,9 @@
 		}
 
 		@media only screen and (max-width: 769px) {
-			&-link {
+			gap: 16px;
+			
+			& a {
 				font-size: 12px;
 				line-height: 16px;
 			}
@@ -176,7 +115,7 @@
 		}
 
 		@media only screen and (max-width: 610px) {
-			gap: 50px;
+			gap: 30px;
 			justify-content: center;
 		}
 	}
@@ -185,17 +124,19 @@
 		display: flex;
 		flex-direction: column;
 
-		&--address {
-			width: 360px;
-		}
+		&--info,
+		&--pages {
+			width: 250px;
 
-		&--info {
-			gap: 42px;
+			@media only screen and (max-width: 1500px) {
+				width: auto;
+			}
 		}
 
 		@media only screen and (max-width: 900px) {
-			&--address {
+			&--info {
 				width: 100%;
+				align-items: center;
 			}
 		}
 	}
@@ -207,7 +148,7 @@
 			&--contacts {
 				display: flex;
 				flex-direction: column;
-				gap: 30px;
+				gap: 20px;
 			}
 		}
 
@@ -215,35 +156,18 @@
 			&--links {
 				display: flex;
 				flex-direction: column;
-				gap: 30px;
-			}
-		}
-
-		@media only screen and (max-width: 900px) {
-			&--contacts {
-				width: 100%;
-				margin-top: 50px;
-			}
-
-			&--links {
-				display: flex;
-				flex-direction: row;
-				gap: 30px;
+				gap: 20px;
 			}
 		}
 
 		@media only screen and (max-width: 610px) {
-			text-align: center;
-
+			&--contacts,
 			&--links {
 				width: 100%;
 				justify-content: center;
+				align-items: center;
+				text-align: center;
 			}
-
-			&--contacts {
-				margin-top: 0;
-			}
-
 		}
 	}
 
@@ -252,23 +176,16 @@
 		gap: 16px;
 		margin-bottom: 16px;
 
-		& span {
-			font-size: 14px;
-			line-height: 22px;
-			color: #ffffff;
-		}
-
 		&-list {
 			display: flex;
 			flex-direction: column;
 
 			& a {
-				font-weight: 600;
-				font-size: 18px;
-				line-height: 25px;
-				color: #ffffff;
+				font-size: 14px;
+				line-height: 22.4px;
+				color: #fff;
 				transition: opacity .3s;
-
+	
 				@media (hover: hover) {
 					&:hover {
 						opacity: .7;
@@ -276,128 +193,22 @@
 				}
 			}
 		}
-
-		@media only screen and (max-width: 900px) {
-			justify-content: center;
-			align-items: center;
-		}
-	}
-
-	&__mail {
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 17.85px;
-		color: #9B9B9B;
-		transition: opacity .3s;
-		margin-left: auto;
-
-		@media (hover: hover) {
-			&:hover {
-				opacity: .7;
-			}
-		}
-
-		@media only screen and (max-width: 900px) {
-			margin-left: 0;
-			text-align: center;
-		}
-	}
-
-	&__controls {
-		display: flex;
-		gap: 8px;
-		flex-direction: column;
-		margin-top: 16px;
-	}
-
-	&__button {
-		text-transform: uppercase;
 	}
 
 	&__bottom {
 		width: 100%;
-		padding: 24px 0;
-		border-top: 1px solid #FFFFFF29;
-		color: #FFFFFF52;
-		font-size: 14px;
+		padding-bottom: 20px;
+		color: #B5B2B2;
+		font-family: "Roboto Flex", sans-serif;
+		font-size: 16px;
 		font-weight: 400;
-		line-height: 18.2px;
+		line-height: 25.6px;
+		text-align: left;
 
-		& a {
-			color: #FFFFFF52;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 18.2px;
-			transition: opacity .3s;
-
-			@media (hover: hover) {
-				&:hover {
-					opacity: .7;
-				}
-			}
-		}
-
-		&-content {
-			display: flex;
-			align-items: center;
-			width: 100%;
-			justify-content: space-between;
-
-			@media only screen and (max-width: 900px) {
-				width: 100%;
-				flex-direction: column;
-				gap: 5px;
-			}
-		}
-
-		&-privacy {
-			margin-right: 100px;
-
-			@media only screen and (max-width: 1160px) {
-				margin: 0;
-			}
-		}
-
-		&-studio {
-			display: flex;
-			align-items: center;
-
-			& img {
-				margin-top: 2px;
-				height: 11px;
-				width: 56px;
-			}
-
-			& span {
-				padding-right: 14px;
-			}
-
-			@media only screen and (max-width: 1160px) {
-				margin: 0;
-			}
-		}
-	}
-
-	.icons {
-		display: flex;
-		gap: 4px;
-
-		&__link {
-			display: flex;
-			flex-shrink: 0;
-			justify-content: center;
-			align-items: center;
-			width: 32px;
-			height: 32px;
-			background-color: #575A5F;
-			border-radius: 50%;
-			transition: background-color .3s;
-
-			@media (hover: hover) {
-				&:hover {
-					background-color: #3a3c3f;
-				}
-			}
+		@media only screen and (max-width: 900px) {
+			text-align: center;
+			font-size: 12px;
+			line-height: 14px;
 		}
 	}
 }
