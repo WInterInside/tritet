@@ -87,44 +87,6 @@ $('.form__input--tel').each(function() {
 	$(this).on("input focus blur keydown", mask);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-	// Функция создания карты
-	function createMap(xID, coords) {
-		const mapContainer = document.getElementById(xID);
-		if (mapContainer) {
-			ymaps.ready(function () {
-				const myMap = new ymaps.Map(xID, {
-					center: coords,
-					zoom: 17,
-					controls: []
-				});
-
-				const myPlacemark = new ymaps.Placemark(coords,
-					{
-						hintContent: 'г. Воронеж, ул. Солнечная, 13 «Е», помещение 2',
-						balloonContent: 'г. Воронеж, ул. Солнечная, 13 «Е», помещение 2'
-					},
-					{
-						iconLayout: 'default#image',
-						iconImageHref: 'img/pin.svg',
-						iconImageSize: [32, 43],
-						iconImageOffset: [80, 0]
-					}
-				);
-
-				myMap.geoObjects.add(myPlacemark);
-				myMap.behaviors.disable('scrollZoom');
-			});
-		} else {
-			console.error("Элемент с ID", xID, "не найден.");
-		}
-	}
-
-	// Вызов функции создания карты
-	createMap('footer__map', [51.678526, 39.164103]);
-	// createMap('contacts__map', [51.678526, 39.164103]);
-});
-
 $(document).on('click', '[data-elements~="tabsBtn"]', function(e) {
 	let id = $(this).data('tab');
 	let tabs = $(this).closest('[data-elements~="tabs"]');
@@ -136,16 +98,14 @@ $(document).on('click', '[data-elements~="tabsBtn"]', function(e) {
 });
 
 $(document).ready(function () {
-	// Находим все слайдеры и кнопки
 	var sliders = $('.drawings__slider');
 	var prevButtons = $('.prev');
 	var nextButtons = $('.next');
 
-	// Проходимся по каждому слайдеру
+
 	sliders.each(function(index) {
 		var currentSlider = $(this);
 
-		// Инициализируем текущий слайдер
 		currentSlider.slick({
 			dots: false,
 			arrows: false,
@@ -158,7 +118,7 @@ $(document).ready(function () {
 			autoplaySpeed: 3000
 		});
 
-		// Привязываем события к кнопкам текущего слайдера
+
 		prevButtons.eq(index).on('click', function () {
 			currentSlider.slick('slickPrev');
 		});
@@ -242,7 +202,7 @@ $(document).ready(function () {
 
 	sliders.each(function(index) {
 	var currentSlider = $(this);
-	
+
 	if (currentSlider.hasClass('presentation')) {
 		currentSlider.slick({
 			dots: true,
