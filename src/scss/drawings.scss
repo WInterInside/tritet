@@ -31,8 +31,6 @@
 			transition: border-color .3s, background-color .3s;
 		}
 
-		
-
 		@media (hover: hover) {
 			& .prev:hover,
 			& .next:hover {
@@ -74,6 +72,7 @@
 		}
 
 		.slick-slide {
+			display: flex;
 			position: relative;
 			height: 100%!important;
 			display: flex!important;

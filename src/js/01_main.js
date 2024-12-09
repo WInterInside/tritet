@@ -200,3 +200,96 @@ $(document).ready(function() {
         $smallSlider.slick('slickNext');
     });
 });
+
+$(document).ready(function () {
+	// Находим все слайдеры и кнопки
+	var sliders = $('.drawings__slider');
+	var prevButtons = $('.prev');
+	var nextButtons = $('.next');
+
+	// Проходимся по каждому слайдеру
+	sliders.each(function(index) {
+		var currentSlider = $(this);
+
+		// Инициализируем текущий слайдер
+		currentSlider.slick({
+			dots: false,
+			arrows: false,
+			controls: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true,
+			autoplay: true,
+			autoplaySpeed: 3000
+		});
+
+		// Привязываем события к кнопкам текущего слайдера
+		prevButtons.eq(index).on('click', function () {
+			currentSlider.slick('slickPrev');
+		});
+
+		nextButtons.eq(index).on('click', function () {
+			currentSlider.slick('slickNext');
+		});
+	});
+});
+
+$(document).ready(function () {
+	var sliders = $('.project-page__slider');
+	var prevButtons = $('.prev');
+	var nextButtons = $('.next');
+
+	sliders.each(function(index) {
+	var currentSlider = $(this);
+	
+	if (currentSlider.hasClass('presentation')) {
+		currentSlider.slick({
+			dots: true,
+			arrows: false,
+			controls: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			adaptiveHeight: true,
+			autoplay: false,
+			autoplaySpeed: 3000,
+			responsive: [
+			  {
+				breakpoint: 1300,
+				settings: {
+				  slidesToShow: 2
+				}
+			  },
+			  {
+				breakpoint: 900,
+				settings: {
+				  slidesToShow: 1
+				}
+			  }
+			]
+		  });
+	} else {
+		currentSlider.slick({
+			dots: true,
+			arrows: false,
+			controls: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+			adaptiveHeight: true,
+			autoplay: false,
+			autoplaySpeed: 3000
+		});
+	}
+
+	// Привязываем события к кнопкам текущего слайдера
+	prevButtons.eq(index).on('click', function () {
+		currentSlider.slick('slickPrev');
+	});
+
+	nextButtons.eq(index).on('click', function () {
+		currentSlider.slick('slickNext');
+	});
+	});
+});
