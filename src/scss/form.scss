@@ -1,13 +1,9 @@
-.form {
+form {
 	display: flex;
 	flex-direction: column;
 	gap: 36px;
 
-	&__checkbox {
-		display: none;
-	}
-
-	&__wrapper {
+	.form__wrapper {
 		display: flex;
 		align-items: center;
 		gap: 14px;
@@ -17,35 +13,12 @@
 		}
 	}
 
-	&__label {
+	.form__label {
 		display: block;
 		cursor: pointer;
-
-		&--checkbox {
-			font-size: 12px;
-			font-weight: 400;
-			line-height: 16.37px;
-			color: #A4A47C;
-		}
 	}
 
-	&__label::before {
-		content: "";
-		display: inline-block;
-		width: 20px;
-		height: 20px;
-		border: 1px solid #A4A47C;
-		margin-right: 10px;
-		vertical-align: middle;
-	}
-
-	&__checkbox:checked + &__label::before {
-		background-image: url("../img/check.svg");
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-
-	&__button {
+	.form__button {
 		width: 284px;
 		gap: 13px;
 		margin-left: auto;
@@ -66,5 +39,60 @@
 		line-height: 21px;
 		text-align: left;
 		color: #fff;
+	}	
+
+	.checkbox {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16.37px;
+		color: #A4A47C;
+		letter-spacing: normal;
+		display: flex;
+		text-align: left;
+		justify-content: center;
+	}
+	.checkbox label input {
+		position: absolute;
+		z-index: -1;
+		height: 1px !important;
+		width: 1px !important;
+		opacity: 0 !important;
+	}
+	.checkbox label > span {
+		position: relative;
+		display: block;
+		cursor: pointer;
+	}
+	.checkbox label > span:before {
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #A4A47C;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.checkbox label > span:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		background-image: url("../img/check.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		opacity: 0;
+		transition: .3s;
+	}
+	.checkbox label input:checked + span:after {
+		opacity: 1;
 	}
 }

@@ -46,7 +46,7 @@
 				.form__check,
 				.form__square {
 					width: calc(50% - 14px / 2);
-					
+
 					@media (max-width: 1500px) {
 						width: 100%;
 					}
@@ -93,39 +93,64 @@
 				}
 			}
 
-			.form__label {
+			.checkbox {
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 19.1px;
+				color: #555555;
+				background-color: #fff;
+				border-radius: 6px;
+				padding: 14px 16px;
+				display: flex;
+				justify-content: flex-start;
+			}
+
+			.checkbox label {
+				width: 100%;
+			}
+
+			.checkbox label input {
+				position: absolute;
+				z-index: -1;
+				height: 1px !important;
+				width: 1px !important;
+				opacity: 0 !important;
+			}
+
+			.checkbox label > span {
 				position: relative;
 				display: block;
 				cursor: pointer;
-
-				&--checkbox {
-					font-size: 14px;
-					font-weight: 500;
-					line-height: 19.1px;
-					color: #555555;
-					background-color: #fff;
-					border-radius: 6px;
-					padding: 14px 16px;
-				}
+				width: 100%;
 			}
 
-			.form__label::before {
+			.checkbox label > span:before {
+				display: none;
+			}
+
+			.checkbox label > span:after {
 				content: "";
-				display: inline-block;
 				position: absolute;
+				top: 0;
 				right: 0;
-				top: calc(50% - 10px);
+				left: auto;
 				width: 20px;
 				height: 20px;
-				border: none;
-				margin-right: 10px;
-				vertical-align: middle;
-			}
-
-			.form__checkbox:checked + .form__label::before {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
 				background-image: url("../img/lg-check.svg");
 				background-repeat: no-repeat;
 				background-position: center center;
+				opacity: 0;
+				transition: .3s;
+			}
+			.checkbox label input:checked + span:after {
+				opacity: 1;
 			}
 
 			input[type=number]::-webkit-inner-spin-button,
@@ -133,6 +158,7 @@
 				-webkit-appearance: none; /* Для браузеров на основе WebKit (Chrome, Safari) */
 				margin: 0; /* Убираем отступ */
 			}
+
 			input[type=number] {
 				-moz-appearance: textfield; /* Для Firefox */
 			}
@@ -181,7 +207,7 @@
 		font-weight: 500;
 		line-height: 62.4px;
 		margin-bottom: 20px;
-		
+
 		@media (max-width: 1250px) {
 			font-size: 28px;
 			line-height: 36px;
