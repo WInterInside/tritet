@@ -20,6 +20,8 @@
 		@media (max-width: 1500px) {
 			min-height: auto;
 			background-position: top center;
+			margin-right: -20px;
+			padding-right: 20px;
 		}
 
 		@media (max-width: 1000px) {
@@ -43,6 +45,9 @@
 
 		@media (max-width: 900px) {
 			text-align: center;
+			margin-top: 30px;
+			font-size: 30px;
+			line-height: 40px;
 		}
 	}
 
@@ -61,6 +66,9 @@
 
 		@media (max-width: 900px) {
 			text-align: center;
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 34px;
 		}
 	}
 
