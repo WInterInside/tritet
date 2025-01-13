@@ -46,13 +46,6 @@
 				height: 42px;
 				border-radius: 50%;
 				background-color: #A4A47C;
-				transition:background-color .3s;
-
-				@media (hover: hover) {
-					&:hover {
-						background-color: #72725a;
-					}
-				}
 			}
 		}
 
@@ -70,6 +63,7 @@
 		& a {
 			transition: opacity .3s;
 			white-space: nowrap;
+
 			@media (hover: hover) {
 				&:hover {
 					opacity: .8;

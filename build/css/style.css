@@ -797,13 +797,6 @@
   height: 42px;
   border-radius: 50%;
   background-color: #A4A47C;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-@media (hover: hover) {
-  .contacts-page__item div a:nth-child(2):hover, .contacts-page__item div a:nth-child(3):hover {
-    background-color: #72725a;
-  }
 }
 .contacts-page__item address, .contacts-page__item a, .contacts-page__item span {
   font-size: 24px;
