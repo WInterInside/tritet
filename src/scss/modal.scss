@@ -1,0 +1,45 @@
+.modal {
+	display: none;
+
+	/* Скрываем стандартный крестик */
+	.fancybox-button svg {
+		display: none;
+	}
+
+/* Добавляем свою иконку */
+	.fancybox-button::before {
+		content: 'X'; /* Путь к вашей иконке */
+		display: inline-block;
+		width: 24px; /* Ширина иконки */
+		height: 24px; /* Высота иконки */
+		color: #ffffff;
+	}
+
+	.contacts-page__form {
+		width: 100%;
+		
+		padding: 94px;
+
+		& form {
+			& .button {
+				margin-top: 46px;
+			}
+		}
+
+		@media (max-width: 1100px) {
+			padding: 24px;
+
+			& form {
+				& .button {
+					margin-top: 2 6px;
+				}
+			}
+		}
+	}
+}
+
+body .fancybox-content {
+	padding: 0 !important;
+	background-color: #181C1D;
+	max-width: 528px;
+}

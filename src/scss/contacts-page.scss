@@ -1,0 +1,204 @@
+// стили для страници контактов =>
+.contacts-page {
+	padding: 100px 0 0 0;
+	color: #555555;
+
+	@media (max-width: 750px) {
+		padding: 60px 0 0 0;
+	}
+
+	& h1 {
+		font-size: 48px;
+		font-weight: 500;
+		line-height: 62.4px;
+
+		@media (max-width: 1250px) {
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+
+	& h3 {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 28.8px;
+		text-align: left;
+	}
+
+	&__item {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding-right: 10px;
+
+		& div {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			& a:nth-child(2),
+			& a:nth-child(3) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 42px;
+				height: 42px;
+				border-radius: 50%;
+				background-color: #A4A47C;
+				transition:background-color .3s;
+
+				@media (hover: hover) {
+					&:hover {
+						background-color: #72725a;
+					}
+				}
+			}
+		}
+
+		& address,
+		& a,
+		& span {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 38.4px;
+			text-align: left;
+			font-style: normal;
+			color: #555555;
+		}
+
+		& a {
+			transition: opacity .3s;
+			white-space: nowrap;
+			@media (hover: hover) {
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+
+		@media (max-width: 1300px) {
+			& address,
+			& a,
+			& span {
+				font-size: 16px;
+				line-height: 18.4px;
+			}
+		}
+
+		@media (max-width: 1100px) {
+			width: 100%;
+		}
+
+		@media (max-width: 680px) {
+			gap: 8px;
+
+			& address,
+			& a,
+			& span {
+				font-size: 14px;
+				line-height: 18.4px;
+			}
+
+			& div {
+				gap: 10px;
+
+				& a:nth-child(2),
+				& a:nth-child(3) {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		margin-top: 64px;
+		gap: 22px;
+
+		@media (max-width: 1220px) {
+			margin-top: 34px;
+		}
+
+		@media (max-width: 680px) {
+			flex-direction: column;
+		}
+	}
+
+	&__map-wrapper {
+		display: flex;
+		height: 500px;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 56px;
+
+		@media (max-width: 750px) {
+			margin-top: 36px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 64px;
+		flex-grow: 1;
+		align-self: flex-start;
+
+		@media (max-width: 1100px) {
+			row-gap: 24px;
+		}
+	}
+
+	&__form {
+		width: 492px;
+		flex-shrink: 0;
+		padding: 38px;
+		background-color: #63614F;
+		text-align: center;
+		color: #fff;
+
+		& form {
+			gap: 22px;
+
+			& .button {
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+
+		& p {
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 22.4px;
+		}
+
+		& h2 {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 31.2px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		@media (max-width: 1100px) {
+			padding: 20px;
+			width: 46%;
+
+			& p {
+				font-size: 14px;
+				line-height: 22px;
+			}
+
+			& h2 {
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+
+		@media (max-width: 680px) {
+			width: 100%;
+		}
+	}
+}
+// стили для страници контактов <=
